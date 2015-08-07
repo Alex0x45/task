@@ -1,0 +1,20 @@
+<html>
+	<body>
+		<form method="post">
+			<fieldset>
+				<legend>Tasks</legend>
+				<ol>
+					{{range .}}
+						<li>
+							<input type="checkbox" name="tasks" value="{{.Desc}}"/>{{.Desc}}
+						</li>
+					{{end}}
+				</ol>
+			</fieldset>
+			<span>
+      			<input type="submit" formaction="/add/" value="Add new task">
+      			<input type="submit" formaction="/" value="Delete selected tasks">
+      		</span>    	
+      	</form>
+	</body>
+</html>
